@@ -1,0 +1,107 @@
+.NavBar img {
+    display: inline-block; 
+}
+
+.navbar{
+    background-color: #1e2017; 
+    overflow: hidden; 
+    height: 100px;
+  
+  }
+  
+  .navbar a{
+    float: left; 
+    display: block; 
+    color: #f2f2f2; 
+    text-align: center; 
+    padding: 14px 16px;
+    text-decoration: none; 
+    font-size: 17px;
+    margin-top:10px; /*moving the 3 horizontal lines*/
+  }
+  
+  
+
+  
+  .navbar ul{
+    margin: 8px 0 0 0; 
+    list-style: none; 
+    width: 300px;
+    float: right;
+  }
+  
+  .navbar a:hover{
+    background-color: #ddd; 
+    color: #000; 
+  }
+  
+  
+  .side-nav{
+    height: 100%;
+    width:0; /*makes the menu categories go from horizontal to vertical*/
+    position:fixed;
+    z-index: 1; 
+    top:0; 
+    left:0; 
+    background-color: #011318; /*a little lighter than black*/
+    opacity: 0.9; 
+    overflow-x: hidden; /*hidding horizontal scroll*/
+    padding-top: 60px;
+    transition: 0.5s; /*how fast side nav bar moves to the right*/
+  }
+  
+  .side-nav a{
+    padding: 10px 10px 10px 30px;
+    text-decoration: none; 
+    font-size: 22px; 
+    color: #ccc; 
+    display: block; /*keeps them in a block aligned and not all over the place*/
+    transition: 0.3s;
+  }
+  
+  .side-nav a:hover{
+    color: #fff; 
+  }
+  
+  .side-nav .btn-close{
+    position:absolute; 
+    top:0; 
+    right: 22px;
+    font-size: 36px; 
+    margin-left: 50px;
+  }
+  
+
+  
+  @media(max-width:568px){
+    .navbar-nav{display:none}
+  }
+  
+  @media(min-width:568px){
+    /* .open-slide{display:none} */
+  }
+  
+  /*CONTAINTER */
+  #showcase {
+  background-image:url('./pineapple.jpg');
+  background-size: cover;
+  background-position: center; /*brings to center*/
+  height: 100vh;
+  display:flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    padding: 0 20px; /*so when screen is small it has space on side*/
+    margin-top: -20px; /*closes gap*/
+  }
+  
+  #showcase h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  }
+  
+  #showcase p {
+    font-size: 30px;
+    margin-top: -10px;
+  }
