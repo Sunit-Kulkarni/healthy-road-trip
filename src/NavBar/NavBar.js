@@ -17,8 +17,6 @@ class NavBar extends Component {
 
     }
 
-
-
     render() {
       return (
         <div className="NavBar">
@@ -26,14 +24,14 @@ class NavBar extends Component {
             <span className = "open-slide">
                 <a href ="#" onClick={this.toggleNewSlideMenu.bind(this)}>
                     <svg width = "30" height = "30">
-                        <path d = "M0, 5 30, 5" stroke="#fff" stroke-width="5"/>
-                        <path d = "M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                        <path d = "M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                        <path d = "M0, 5 30, 5" stroke="#fff" strokeWidth="5"/>
+                        <path d = "M0,14 30,14" stroke="#fff" strokeWidth="5"/>
+                        <path d = "M0,23 30,23" stroke="#fff" strokeWidth="5"/>
                     </svg>
                 </a>
             </span>
 
-            <img src = {logo } height="50px" />
+            <img src = {logo } height="60px" />
         
             <ul className="navbar-nav">
             

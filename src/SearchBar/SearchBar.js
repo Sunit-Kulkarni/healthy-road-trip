@@ -8,20 +8,21 @@ class SearchBar extends Component {
             <header id ="showcase">
                 <h1>Explore, smile, and hit the road hungry </h1>
                 <p> Eat things you <i>actually</i> like!</p>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Find Dates </button>
+                <div className="row">
+                    <div className="col-lg-6">
+                        <div className="input-group">
+                                <span className="input-group-btn">
+                                    <button className="btn btn-default" type="button">Find Dates </button>
                                 </span>
-                            <input type="text" class="form-control" placeholder="January to March...." />
+                            
+                            <input className="form-control"  data-date-format="mm/dd/yyyy" placeholder="January to March...." />
                         </div>
                     </div> 
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                            <input type="text" class="form-control" placeholder="New York, Pennsylvania, California, " />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Go!</button>
+                        <div className="col-lg-6">
+                            <div className="input-group">
+                            <input type="text" className="form-control" placeholder="New York, Pennsylvania, California, " />
+                                <span className="input-group-btn">
+                                    <button className="btn btn-default" type="button">Go!</button>
                                 </span>
                             </div> 
                         </div> 

@@ -1,12 +1,13 @@
 .NavBar img {
     display: inline-block; 
+    margin-top: 12px;
 }
 
 .navbar{
     background-color: #1e2017; 
     overflow: hidden; 
     height: 100px;
-  
+    margin-right: -100px;
   }
   
   .navbar a{
@@ -20,11 +21,8 @@
     margin-top:10px; /*moving the 3 horizontal lines*/
   }
   
-  
-
-  
   .navbar ul{
-    margin: 8px 0 0 0; 
+    margin: 8px 50px 0 0; 
     list-style: none; 
     width: 300px;
     float: right;
