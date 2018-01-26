@@ -1,8 +1,9 @@
 import React , { Component } from 'react';
 import {Link } from 'react-router-dom';
 import $ from 'jquery'; 
-import logo from '../longLOGO2.png';
+import logo from '/Users/Cherie/DigitalCraft/healthy-road-trip/src/longLOGO2.png';
 import './NavBar.css';
+
 
 
 
@@ -31,8 +32,8 @@ class NavBar extends Component {
                 </a>
             </span>
 
-            <img src = {logo } height="60px" />
-        
+            <Link to = '/' ><img src = {logo } height="60px" id = "logo"/></Link>
+
             <ul className="navbar-nav">
             
                 <li className = "navbarWords"><Link to = "/Login"> Login </Link> </li> 
@@ -46,9 +47,9 @@ class NavBar extends Component {
 
             <div id= "side-menu" className = "side-nav" style ={{width: this.state.openSlideMenu ? "250px" : "0px"}}>
                 <a href ="#" className="btn-close" onClick={this.toggleNewSlideMenu.bind(this)}>&times;</a>
-                <a href = "#">Start New Trip</a>
-                <a href = "">Sign Up</a>
-                <a href = "">Login</a>
+                <Link to = "/">Start A New Trip </Link>
+                <Link to = "/SignUp">Sign Up </Link>
+                <Link to = "/Login"> Login </Link> 
             </div>
    
 

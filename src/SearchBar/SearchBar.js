@@ -15,7 +15,7 @@ class SearchBar extends Component {
                                     <button className="btn btn-default" type="button">Find Dates </button>
                                 </span>
                             
-                            <input className="form-control"  data-date-format="mm/dd/yyyy" placeholder="January to March...." />
+                            <input className="form-control" type = "date" data-date-format="mm/dd/yyyy" placeholder="January to March...." />
                         </div>
                     </div> 
                         <div className="col-lg-6">

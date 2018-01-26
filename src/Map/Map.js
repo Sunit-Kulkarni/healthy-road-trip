@@ -4,6 +4,9 @@ const google = window.google;
 class Map extends Component {
     
     initMap() {
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnBY-yCl6U-ZVE6cMGc2GOFXEAe7cCv40"
+        async defer></script>
+
         console.log('hello');
         //map options
         var options = {
