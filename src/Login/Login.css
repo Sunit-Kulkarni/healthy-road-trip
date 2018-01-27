@@ -1,7 +1,16 @@
-.inputBar {
+#formHorizontalEmail.inputBar {
     width: 90%;
 }
 
+#formHorizontalPassword.inputBar{
+    margin: 0px;
+    width: 90%;
+    border: 1px solid lightgray;
+}
+
+.EmailSection.form-group {
+    padding-top: 80px;
+}
   
 /* return {
     margin-top: 10%;
@@ -15,3 +24,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
  */
+
+
+ @media(max-width: 842px) {
+  
+    .EmailSection.form-group {
+        padding-top: 80px; 
+    }   
+    #login-box {
+        padding-right: 10px;
+    }
+ }
