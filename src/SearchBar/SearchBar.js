@@ -1,4 +1,5 @@
 import React , { Component } from 'react';
+import './SearchBar.css'; 
 import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class SearchBar extends Component {
@@ -10,7 +11,7 @@ class SearchBar extends Component {
                 <h1>Explore, smile, and hit the road hungry </h1>
                 <p> Eat things you <i>actually</i> like!</p>
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-md-6">
                         <div className="input-group">
                                 <span className="input-group-btn">
                                     <button className="btn btn-default" type="button">Travel Day </button>
@@ -19,7 +20,7 @@ class SearchBar extends Component {
                             <input className="form-control" type = "date" data-date-format="mm/dd/yyyy" placeholder="January to March...." />
                         </div>
                     </div> 
-                        <div className="col-lg-9">
+                        <div className="col-md-6">
                             <div className="input-group">
                             <input type="text" className="form-control" placeholder="New York, Pennsylvania, California, " />
                                 <span className="input-group-btn">
