@@ -28,7 +28,7 @@ class SearchBar extends Component {
                                 </span>
                             </div> 
                         </div> 
-                    </div>
+                </div>
             </header>
          </div>
         );
