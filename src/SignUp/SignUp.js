@@ -19,8 +19,8 @@ class SignUp extends Component {
             <input type="submit" name="signup_submit" value="Sign me up" />
         </div>
         
-        <div class="right">
-            <span class="loginwith">Sign in with<br />social network</span>
+        <div className="right">
+            <span className="loginwith">Sign in with<br />social network</span>
             
             <button className="social-signin facebook">Log in with Facebook</button>
             <button className="social-signin github">Log in with Github</button>

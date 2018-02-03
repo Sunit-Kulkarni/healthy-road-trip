@@ -1,83 +1,54 @@
 import React , { Component } from 'react';
-const google = window.google;
+import { GoogleApiWrapper, Map, Marker  } from 'google-maps-react';
+import './Map.css';
 
-class Map extends Component {
-    
-    initMap() {
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnBY-yCl6U-ZVE6cMGc2GOFXEAe7cCv40"
-        async defer></script>
 
-        console.log('hello');
-        //map options
-        var options = {
-          zoom: 5,
-          center: {lat: 33.7490, lng: -84.3880} //atlanta
+
+class MapContainer extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            markers:[]
         }
-        //new map
-        var map = new
-        google.maps.Map(document.getElementById('map'), options);
-    
-        addMarker({
-            coordinates: {lat: 33.8373, lng: -84.4068},
-            iconImage: 'https:developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content: '<h3> Home: Buckhead, GA</h3>'
-            }); //Buckhead
-    
-        addMarker({
-            coordinates: {lat: 40.7128, lng: -74.0060},
-            content: '<h3> New York, NY</h3>'
-            }); //New York
-    
-        addMarker({
-            coordinates: {lat: 39.9526, lng: -75.1652},
-            content: '<h3> Philadelphia, PA</h3>'
-            }); //Pennyslvania
-    
-        addMarker({
-            coordinates: {lat: 30.3322, lng: -81.6557},
-            content: '<h3> Jacksonville, FL</h3>'
-            }); //Jacksonville, FL
-        
-        //Add Marker function
-        function addMarker (props){
-        var marker = new google.maps.Marker({
-            position: props.coordinates, //buckhead
-            map:map,
-            //icon:props.iconImage
-            });
-    
-            //check for customicon
-            if(props.iconImage) {
-            //set Icon Image
-            marker.setIcon(props.iconImage);
-            }
-    
-            //check content
-            if(props.content) {
-            var infoWindow = new google.maps.InfoWindow({
-                content: props.content
-                });
-    
-                marker.addListener('click', function() {
-                infoWindow.open(map, marker);
-            });
-            }
-    
-       }
-    
     }
+    
+    // componentDidMount() {
+    //     this.prop.fetchMarkersState();
+    // }
 
     render() {
 
-        return <div id = "map"></div> 
-    }
-    componentDidMount()  {
-        this.initMap();
+        var plotMarkers = this.state.markers.map((marker, index)=>{
+            
+            //gives markers a variable name then stores it
+            return <Marker key = {index}
+                                // name ={}
+                                position= {{lat:marker.lat, lng:marker.lng}} 
+                                />
+        
+          });
+
+        return (
+
+            <Map google = {this.props.google} zoom={15}
+            
+                initialCenter=  {{
+                    lat: 33.7490,
+                    lng: -84.3880
+                }}
+            >
+                {plotMarkers}
+
+            </Map>
+        )
     }
   
 }
 
-export default Map;
+export default GoogleApiWrapper({
+    apiKey: "AIzaSyCnBY-yCl6U-ZVE6cMGc2GOFXEAe7cCv40"    
+})(MapContainer); 
        
 
 

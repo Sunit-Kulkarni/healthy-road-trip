@@ -2,3 +2,17 @@
     display: inline-block;
 }
 
+.company {
+    font-family: sans-serif;
+}
+
+.dropdown {
+  width: 100%;
+}
+#dropdown1 {
+    width: 100%;
+}
+ul.dropdown-menu {
+    width: 100%;
+    text-align: center;
+}

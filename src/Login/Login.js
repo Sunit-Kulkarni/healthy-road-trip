@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css';
 import { Col, ControlLabel, FormControl, Checkbox, Form, FormGroup, Button } from 'react-bootstrap';
+import './Login.css';
+
 
 
 class Login extends Component {

@@ -39,7 +39,7 @@
     height: 100%;
     width:0; /*makes the menu categories go from horizontal to vertical*/
     position:fixed;
-    z-index: 1; 
+    z-index: 10; 
     top:0; 
     left:0; 
     background-color: #011318; /*a little lighter than black*/
@@ -93,6 +93,7 @@
   text-align: center;
     padding: 0 20px; /*so when screen is small it has space on side*/
     margin-top: -20px; /*closes gap*/
+   
   }
   
   #showcase h1 {
