@@ -9,8 +9,8 @@ class SearchBar extends Component {
         this.props.history.push('/map/nyc')
     }
 
-    Philly(){
-        this.props.history.push('/map/philly')
+    Philadelphia(){
+        this.props.history.push('/map/philadelphia')
     }
 
     Raleigh(){
@@ -41,7 +41,7 @@ class SearchBar extends Component {
                         >
                         <MenuItem onSelect={this.NYC.bind(this)} eventKey = "Atlanta to NY"> Atlanta, GA to New York, NY </MenuItem>
                         <MenuItem divider />
-                        <MenuItem onSelect={this.Philly.bind(this)} eventKey = "Atlanta to PA"> Atlanta, GA to Philadelpha, PA </MenuItem>
+                        <MenuItem onSelect={this.Philadelphia.bind(this)} eventKey = "Atlanta to PA"> Atlanta, GA to Philadelpha, PA </MenuItem>
                         <MenuItem divider />
                         <MenuItem onSelect={this.Raleigh.bind(this)} eventKey = "Atlanta to NC"> Atlanta, GA to Raleigh, NC</MenuItem>
 

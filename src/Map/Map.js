@@ -12,10 +12,12 @@ class MapContainer extends React.Component {
             markers:[]
         }
     }
+
+
+    sendCredentialsHandler = (e) => {
+        console.log(e.target);
+    }
     
-    // componentDidMount() {
-    //     this.prop.fetchMarkersState();
-    // }
 
     render() {
 
@@ -26,13 +28,13 @@ class MapContainer extends React.Component {
                                 // name ={}
                                 position= {{lat:marker.lat, lng:marker.lng}} 
                                 />
+        });
+
         
-          });
 
         return (
 
             <Map google = {this.props.google} zoom={15}
-            
                 initialCenter=  {{
                     lat: 33.7490,
                     lng: -84.3880
@@ -43,7 +45,6 @@ class MapContainer extends React.Component {
             </Map>
         )
     }
-  
 }
 
 export default GoogleApiWrapper({
