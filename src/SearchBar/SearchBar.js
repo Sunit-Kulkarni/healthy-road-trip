@@ -1,20 +1,25 @@
 import React , { Component } from 'react';
 import './SearchBar.css'; 
 import {DropdownButton, MenuItem,  UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'react-bootstrap';
-import {withRouter} from 'react-router-dom';
+import {Route, withRouter} from 'react-router-dom';
+import MapContainer from '../Map/Map.js';
+
 
 
 class SearchBar extends Component {
+    home() {
+        this.props.history.push('/');
+      }
     NYC(){
-        this.props.history.push('/map/nyc')
+        this.props.history.push('/map/nyc');
     }
 
     Philadelphia(){
-        this.props.history.push('/map/philadelphia')
+        this.props.history.push('/map/philadelphia');
     }
 
     Raleigh(){
-        this.props.history.push('/map/raleigh')
+        this.props.history.push('/map/raleigh');
     }
 
     render() {
@@ -38,15 +43,17 @@ class SearchBar extends Component {
                         <DropdownButton
                             title = {"Select a state"} 
                             id = {'dropdown1'}
+                            name = {'cities'}
                         >
-                        <MenuItem onSelect={this.NYC.bind(this)} eventKey = "Atlanta to NY"> Atlanta, GA to New York, NY </MenuItem>
+                        <MenuItem onSelect={this.NYC.bind(this)} eventKey = "Atlanta to NY" name = "NY"> Atlanta, GA to New York, NY  </MenuItem>
                         <MenuItem divider />
-                        <MenuItem onSelect={this.Philadelphia.bind(this)} eventKey = "Atlanta to PA"> Atlanta, GA to Philadelpha, PA </MenuItem>
+                        <MenuItem onSelect={this.Philadelphia.bind(this)} eventKey = "Atlanta to PA" name = "PA"> Atlanta, GA to Philadelpha, PA </MenuItem>
                         <MenuItem divider />
-                        <MenuItem onSelect={this.Raleigh.bind(this)} eventKey = "Atlanta to NC"> Atlanta, GA to Raleigh, NC</MenuItem>
-
+                        <MenuItem onSelect={this.Raleigh.bind(this)} eventKey = "Atlanta to NC" name = "NC"> Atlanta, GA to Raleigh, NC</MenuItem>
+                        <Route path="/map/:city" component={MapContainer} />
                         </DropdownButton>  
-
+                        
+                   
                     </div>
                 </div>
             </header>
