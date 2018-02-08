@@ -23,17 +23,16 @@ class MapContainer extends React.Component {
         this.directionsDisplay.setMap(map);
 
         var destination; 
-        if(this.state.destination == 'nyc'){
+        if(this.state.destination === 'nyc'){
             destination = "New York, NY";
-        } else if (this.state.destination == 'philadelphia'){
+        } else if (this.state.destination === 'philadelphia'){
             destination = "Philadelphia, PA";
-        } else if (this.state.destination == 'raleigh'){
+        } else if (this.state.destination === 'raleigh'){
             destination = "Raleigh, NC"; 
         }
         this.directionsService.route({
-            origin: "Atlanta, GA", 
             destination: destination, 
-            traelMode: 'DRIVING'
+            travelMode: 'DRIVING'
         }, (response, status) => {
             if (status === 'OK') {
                 this.directionsDisplay.setDirections(response); 
@@ -46,7 +45,7 @@ class MapContainer extends React.Component {
         axios.get('/restaurants/' + this.state.destination)
         .then(({restaurants})=>{
            this.setState({
-             markers: restaurants
+            markers: restaurants
            })
         });
     }
@@ -57,8 +56,8 @@ class MapContainer extends React.Component {
             //gives markers a variable name then stores it
             return <Marker key = {index}
                                 position= {{
-                                    lat:marker.lat, 
-                                    lng:marker.lng}} 
+                                    lat:marker.lat, lng:marker.lng
+                                }} 
                                 />
         });
 
